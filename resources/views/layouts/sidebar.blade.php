@@ -3,7 +3,7 @@
     aria-label="Sidebar">
     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800 custom-scrollbar">
         <div class="flex items-center mb-4">
-            <img src="assets/delwathon_dark.png" class="w-12 h-12" style="">
+            <img src="{{asset('assets/delwathon_dark.png')}}"  class="w-12 h-12" style="">
             <p class="text-2xl uppercase">Delwathon</p>
         </div>
         <ul class="space-y-2 font-medium">
