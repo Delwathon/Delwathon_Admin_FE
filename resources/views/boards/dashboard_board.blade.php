@@ -1,150 +1,195 @@
 <div class="sm:ml-64">
     <div class="p-4 pb-0">
-        <div class="mt-14">
+        <div class="mt-8">
             <div class="h-fit w-full p-4">
-                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                    <div class="bg-rd-blue h-full">
-                        <div class="w-full px-6 pt-4 pb-8">
-                            <div class="flex flex-col gap-4">
-                                <p class="text-white font-bold">All Check In's</p>
-                                <hr class="border-white w-full">
-                                <div class="flex w-full justify-between">
-                                    <div class="flex text-white gap-3">
-                                        <p>Show</p>
-                                        <select name="number" id=""
-                                            class="border bg-transparent border-white text-xs outline-none py-1.5 px-1 rounded-md text-white font-medium">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3" selected>3</option>
-                                        </select>
-                                        <p>entries</p>
-                                    </div>
-                                    <div class="flex text-white gap-3">
-                                        <p>Search</p>
-                                        <input class="outline-none border border-white rounded w-32 bg-transparent">
-                                    </div>
+                <div class="h-full flex justify-between align-center">
+                    <p class="text-2xl font-semibold">Overview</p>
+                    <div class="">
+                        @include('layouts.dropdown')
+                    </div>
+                </div>
+                <div class="relative shadow-md sm:rounded-lg border mt-4">
+                    <div class="flex items-center justify-between w-full p-4 addgradient">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Let's Get Started!</h3>
+                            <p class="font-normal mt-3">Explore on your own or follow our docs and tutorials.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 items-center">
+                            <button
+                                class="bg-white transition hover:bg-black hover:text-white px-3 border outline-none text-sm py-2">Documentation
+                                <i class='bx bxs-right-arrow-alt translate-y-1.5 text-2xl'></i></button>
+                            <button
+                                class="bg-white transition hover:bg-black hover:text-white px-3 border outline-none text-sm py-2"><i
+                                    class='bx bxl-discord translate-y-1.5 text-2xl'></i> Discord</button>
+                            <button
+                                class="bg-white transition hover:bg-black hover:text-white px-3 border outline-none text-sm py-2">Tutorials
+                                <i class='bx bxs-right-arrow-alt translate-y-1.5 text-2xl'></i></button>
+                            <button
+                                class="bg-white transition hover:bg-black hover:text-white px-3 border outline-none text-sm py-2 "><i
+                                    class='bx bxl-youtube translate-y-1.5 text-2xl'></i> Youtube</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative shadow-md sm:rounded-lg mt-6 border">
+                    <div class="w-full ">
+                        <div class="p-4">
+                            <h3 class="text-2xl font-semibold">Free Account</h3>
+                            <p class="font-semibold uppercase text-[#003399] mt-2">Current Plan</p>
+                        </div>
+                        <div class="mt-2 flex items-center justify-between bg-white ">
+                            <div class="border-r flex gap-4 lg:w-1/2 w-full p-4">
+                                <div>
+                                    <p class="flex gap-2 items-center">
+                                        <span class="text-gray-400 uppercase">Limit Reset</span>
+                                        <i
+                                            class='bx bx-question-mark border border-[#003399] p-1 rounded-full text-[#003399]'></i>
+                                    </p>
+                                    <p>2/4/2024</p>
                                 </div>
+                                <div class="">
+                                    <p class="flex gap-2">
+                                        <span class="text-gray-400 uppercase">Account ID</span>
+                                        <i
+                                            class='bx bx-question-mark border border-[#003399] p-1 rounded-full text-[#003399]'></i>
+                                    </p>
+                                    <p>
+                                        <span>65969b485982fa001c6482af</span>
+                                        <i class='bx bx-copy border border-gray-400 p-2 rounded-md'></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lg:w-1/2 w-full px-4">
+                                <button
+                                    class="bg-[#003399] hover:bg-[#003399d6] transition rounded-md text-white py-2 px-3 w-full">Upgrade
+                                    plan</button>
                             </div>
                         </div>
                     </div>
-                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                        <thead class="text-xs text-white uppercase bg-rd-blue pb-4">
-                            <tr>
-                                <th scope="col" class="px-6 py-3">
-                                    Guest
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Check-In-Date
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Lodge ID
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Room Occupied
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Check-out Date
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Amount
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Paid with
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Action
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @for ($i = 0; $i < 6; $i++)
-                                <tr class="odd:bg-white even:bg-gray-50 shadow-md rounded-md">
-                                    <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap">
-                                        <div class="flex gap-3">
-                                            <img src="{{ asset('assets/user1.png') }}" alt="User"
-                                                class="h-8 w-8 rounded-full">
-                                            <p class="font-semibold text-rd-dark">Solomon King<br><small>Business
-                                                    Man</small></p>
-                                        </div>
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        21-Feb-2022
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        97316718
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Cherry - Room 104
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        23-Feb-2022
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        #49,800
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Bank Transfer
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        <div class="flex gap-3 items-center">
-                                            <button class="relative">
-                                                <div class="h-6 w-6">
-                                                    <img src="{{ asset('assets/eye.png') }}" alt=""
-                                                        class="rounded">
-                                                </div>
-                                            </button>
-                                            <button class="relative">
-                                                <div class="h-6 w-6">
-                                                    <img src="{{ asset('assets/download.png') }}" alt=""
-                                                        class="rounded">
-                                                </div>
-                                            </button>
-                                            <button class="relative">
-                                                <div class="h-6 w-6">
-                                                    <img src="{{ asset('assets/edit1.png') }}" alt=""
-                                                        class="rounded">
-                                                </div>
-                                            </button>
-                                            <button class="relative">
-                                                <div class="h-6 w-6">
-                                                    <img src="{{ asset('assets/share.png') }}" alt=""
-                                                        class="rounded">
-                                                </div>
-                                            </button>
-                                            <button class="relative">
-                                                <div class="h-6 w-6">
-                                                    <img src="{{ asset('assets/delete.png') }}" alt=""
-                                                        class="rounded">
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            @endfor
-                        </tbody>
-                    </table>
                 </div>
-                <nav class="flex items-center flex-column flex-wrap md:flex-row justify-between pt-4"
-                    aria-label="Table navigation">
-                    <span
-                        class="text-md font-normal text-gray-500 dark:text-gray-400 mb-4 md:mb-0 block w-full md:inline md:w-auto">Showing
-                        <span class="font-semibold text-gray-900">1 to 3</span> of <span
-                            class="font-semibold text-gray-900">3</span></span>
-                    <ul class="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8">
-                        <li>
-                            <a href="#"
-                                class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-rd-blue bg-transparent border border-rd-blue rounded-s-lg hover:bg-rd-blue hover:text-white">Previous</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center justify-center px-4 h-8 leading-tight text-white bg-rd-blue border border-rd-blue hover:bg-transparent hover:text-rd-blue">1</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center justify-center px-3 h-8 leading-tight text-rd-blue bg-transparent border border-rd-blue rounded-e-lg hover:bg-rd-blue hover:text-white">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="relative mt-6">
+                    <p class="text-xl font-semibold">Usage</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center mt-2">
+                        <div class="bg-white border rounded-md p-4 flex gap-4">
+                            <p
+                                class="p-3 bg-gray-400 text-[#003399] text-2xl rounded-md flex justify-center items-center">
+                                <i class='bx bx-wallet-alt'></i>
+                            </p>
+                            <div>
+                                <p class="flex gap-2">
+                                    <span class="text-gray-400">Cost</span>
+                                    <i
+                                        class='bx bx-question-mark border border-[#003399] p-1 rounded-full text-[#003399]'></i>
+                                </p>
+                                <p class="font-semibold">$ 0</p>
+                            </div>
+                        </div>
+                        <div class="bg-white border rounded-md p-4 flex gap-4">
+                            <p
+                                class="p-3 bg-gray-400 text-[#003399] text-2xl rounded-md flex justify-center items-center">
+                                <i class='bx bx-envelope'></i>
+                            </p>
+                            <div>
+                                <p class="flex gap-2">
+                                    <span class="text-gray-400">Sent Notifications</span>
+                                    <i
+                                        class='bx bx-question-mark border border-[#003399] p-1 rounded-full text-[#003399]'></i>
+                                </p>
+                                <p class="font-semibold">0</p>
+                            </div>
+                        </div>
+                        <div class="bg-white border rounded-md p-4 flex gap-4">
+                            <p
+                                class="p-3 bg-gray-400 text-[#003399] text-2xl rounded-md flex justify-center items-center">
+                                <i class='bx bx-send'></i>
+                            </p>
+                            <div>
+                                <p class="flex gap-2">
+                                    <span class="text-gray-400">API Calls</span>
+                                    <i
+                                        class='bx bx-question-mark border border-[#003399] p-1 rounded-full text-[#003399]'></i>
+                                </p>
+                                <p class="font-semibold">0</p>
+                            </div>
+                        </div>
+                        <div class="bg-white border rounded-md p-4 flex gap-4">
+                            <p
+                                class="p-3 bg-gray-400 text-[#003399] text-2xl rounded-md flex justify-center items-center">
+                                <i class='bx bx-cloud-upload'></i>
+                            </p>
+                            <div>
+                                <p class="flex gap-2">
+                                    <span class="text-gray-400">Deployments</span>
+                                    <i
+                                        class='bx bx-question-mark border border-[#003399] p-1 rounded-full text-[#003399]'></i>
+                                </p>
+                                <p class="font-semibold">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center mt-4">
+                        <a href="/usage" class="underline text-sm font-medium text-[#003399]">View more</a>
+                    </div>
+                </div>
+                <div class="relative mt-6">
+                    <p class="text-xl font-semibold">Modules</p>
+                    <div class="mt-3">
+                        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <thead
+                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">
+                                            Secret Key
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                           School
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Purchase key
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            School Url
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Actions
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        class="bg-white border dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            <i class='bx bx-edit text-blue-600'></i>
+                                             Mainnet API key
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            Silver
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            t-6596****01b62d
+                                        <i class='bx bx-copy border border-gray-400 p-2 rounded-md'></i>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            Silver@gmail.com
+                                        </td>
+                                        <td class="px-6 py-4 ">
+                                            <div class="flex gap-4">
+                                                <a href="#"
+                                                class="font-medium text-blue-600 hover:underline">Edit</a>
+                                                <a href="#"
+                                                class="font-medium text-red-600 hover:underline">Delete</a>
+                                                <a href="#"
+                                                class="font-medium text-green-600 hover:underline">Revoke</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
