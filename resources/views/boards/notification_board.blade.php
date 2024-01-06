@@ -139,7 +139,7 @@
                                     CHAIN
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    tYPE
+                                    TYPE
                                 </th>
                                 <th scope="col" class="px-6 py-3">
                                     ADDRESS / EVENT
