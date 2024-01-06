@@ -18,7 +18,7 @@
                 <button type="button"
                     class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     aria-controls="dropdown-example2" data-collapse-toggle="dropdown-example2">
-                    <i class='bx bx-bell  text-2xl'></i>
+                    <i class='bx bx-bell text-2xl'></i>
                     <span class="flex-1 ml-3 text-left whitespace-nowrap">Notifications</span>
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 10 6">
@@ -27,6 +27,10 @@
                     </svg>
                 </button>
                 <ul id="dropdown-example2" class="hidden py-2 space-y-2">
+                    <li>
+                        <a href="/notifications"
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Notifications</a>
+                    </li>
                     <li>
                         <a href="notifications"
                             class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Subscriptions</a>

@@ -43,11 +43,11 @@
                 <div class="text-white text-xl ml-12">
                     <div class="flex items-center my-8">
                         <img src="assets/delwathon_dark.png" class="w-16 h-16 invert" style="">
-                        <p class="text-3xl text-white uppercase">Delwathon</p>
+                        <p class="text-3xl text-white uppercase">Eduthon</p>
                     </div>
                     <div class="">
                         <p class="text-4xl w-4/5">Easily Track, Measure, and Scale.</p>
-                        <p>Explore your Delwathon <b>Dashboard</b> today.</p>
+                        <p>Explore your Eduthon <b>Dashboard</b> today.</p>
                     </div>
                     <div class="my-4">
                         <ul class="list-disc">

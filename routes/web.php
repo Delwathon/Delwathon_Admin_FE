@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
+Route::get('/notifications', function () {
+    return view('pages.notifications');
+});
 Route::get('/notifications/notifications', function () {
     return view('pages.notifications2');
 });
