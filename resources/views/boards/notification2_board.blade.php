@@ -39,4 +39,6 @@
             </div>
         </div>
     </div>
+    <div class="h-16"></div>
+    @include('layouts.footer')
 </div>

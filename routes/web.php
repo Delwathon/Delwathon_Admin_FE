@@ -22,6 +22,9 @@ Route::get('/dashboard', function () {
 Route::get('/notifications', function () {
     return view('pages.notifications');
 });
+Route::get('/notifications/subscriptions', function () {
+    return view('pages.subscriptions');
+});
 Route::get('/notifications/notifications', function () {
     return view('pages.notifications2');
 });

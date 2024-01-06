@@ -115,14 +115,17 @@
                             </tr>
                         </thead>
                     </table>
-                        <div>
-                            <div class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 relative p-10 flex justify-center items-center text-sm text-gray-400">
-                                <p>No notifications sent. Create a subscription to start receiving notifications.</p>
-                            </div>
-                            <div class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 relative p-4 flex justify-center items-center text-sm text-gray-400">
-                                <a class='text-[#003399] font-medium text-sm hover:text-[#003399d6]' href="/notifications/notifications">View sent notifications</a>
-                            </div>
+                    <div>
+                        <div
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 relative p-10 flex justify-center items-center text-sm text-gray-400">
+                            <p>No notifications sent. Create a subscription to start receiving notifications.</p>
                         </div>
+                        <div
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 relative p-4 flex justify-center items-center text-sm text-gray-400">
+                            <a class='text-[#003399] font-medium text-sm hover:text-[#003399d6]'
+                                href="/notifications/notifications">View sent notifications</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="relative mt-6 p-4">
@@ -147,16 +150,21 @@
                             </tr>
                         </thead>
                     </table>
-                        <div>
-                            <div class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 relative p-10 flex justify-center items-center text-sm text-gray-400">
-                                <p>No subscriptions sent. Create a subscription to start receiving notifications.</p>
-                            </div>
-                            <div class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 relative p-4 flex justify-center items-center text-sm text-gray-400">
-                                <a class='text-[#003399] font-medium text-sm hover:text-[#003399d6]' href="/notifications/subscriptions">View sent subscriptions</a>
-                            </div>
+                    <div>
+                        <div
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 relative p-10 flex justify-center items-center text-sm text-gray-400">
+                            <p>No subscriptions sent. Create a subscription to start receiving notifications.</p>
                         </div>
+                        <div
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 relative p-4 flex justify-center items-center text-sm text-gray-400">
+                            <a class='text-[#003399] font-medium text-sm hover:text-[#003399d6]'
+                                href="/notifications/subscriptions">View sent subscriptions</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="h-16"></div>
+    @include('layouts.footer')
 </div>
