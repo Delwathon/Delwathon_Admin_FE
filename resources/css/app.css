@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.addgradient {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+.addgradient::before {
+    content: "";
+    position: absolute;
+    top: -118%;
+    left: -16%;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+    background: #003399d6;
+    clip-path: circle(50% at 50% 50%);
+}
+.addgradient::after {
+    content: "";
+    position: absolute;
+    top: -5%;
+    right: -18%;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+    background: #07b4638a;
+    clip-path: circle(50% at 50% 50%);
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+}
+@media (min-width: 768px) {
+    .dflex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .footer {
+        padding: 1.4rem;
+        position: fixed;
+        bottom: 0;
+        width: calc(100% - 16rem);
+        padding: 1rem;
+    }
+}
