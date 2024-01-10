@@ -21,9 +21,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
-// Route::get('/usage', function () {
-//     return view('pages.usage');
-// });
+Route::get('/clients', function () {
+    return view('pages.clients');
+});
 Route::get('/notifications', function () {
     return view('pages.notifications');
 });
