@@ -19,6 +19,23 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
+Route::get('/usage', function () {
+    $boxArray = [
+        ['id' => 1, 'icon' => 'bx-envelope', 'name' => 'Sent notifications'],
+        ['id' => 2, 'icon' => 'bx-send', 'name' => 'API Calls'],
+        ['id' => 3, 'icon' => 'bx-cloud-upload', 'name' => 'Deployments'],
+        ['id' => 4, 'icon' => 'bxs-flask', 'name' => 'RPC Call usage'],
+        ['id' => 5, 'icon' => 'bx-landscape', 'name' => 'NFT Express'],
+        ['id' => 6, 'icon' => 'bxs-truck', 'name' => 'Gas Pump'],
+        ['id' => 7, 'icon' => 'bxs-briefcase', 'name' => 'Custodial Wallet'],
+        ['id' => 8, 'icon' => 'bx-dollar-circle', 'name' => 'Other Fee Covering'],
+    ];
+
+    return view('pages.usage')->with('boxArray', $boxArray);
+});
+Route::get('/clients', function () {
+    return view('pages.clients');
+});
 Route::get('/notifications', function () {
     return view('pages.notifications');
 });

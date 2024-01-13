@@ -12,6 +12,8 @@
     <link rel="shortcut icon" href="{{asset('assets/delwathon_light.png')}}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
 </head>
 <body class="antialiased">
     @yield('content')
