@@ -34,7 +34,10 @@ Route::get('/usage', function () {
     return view('pages.usage')->with('boxArray', $boxArray);
 });
 Route::get('/clients', function () {
-    return view('pages.clients');
+    $tableArray = [
+        ['id' => 1, 'fullname' => 'Eduthon 1', 'email' => 'ade@gmail.com','school_name'=>'Ade schools','secret_key'=>'gdhdfhvcjxgvxvjhvuhdfudu','purchase_code'=>'efgdfgfgsdfhhfdgvhjxhgjhv', 'url'=>'http://localhost:8000/clients'],
+    ];
+    return view('pages.clients')->with('tableArray', $tableArray);
 });
 Route::get('/notifications', function () {
     return view('pages.notifications');

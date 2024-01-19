@@ -116,16 +116,22 @@
                                 class="text-sm text-gray-400 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
-                                        CHAIN
+                                        S/N
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        TYPE
+                                       FULL NAME
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        SUBSCRIPTION
+                                        EMAIL
+                                     </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        SCHOOL NAME
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        ADDRESS / EVENT
+                                        SECRET KEY
+                                     </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        PURCHASE CODE
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         URL
@@ -135,13 +141,47 @@
                                     </th>
                                 </tr>
                             </thead>
+                            @if(count($tableArray) > 0)
+                           <tbody>
+                            @foreach($tableArray as $index => $table)
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 whitespace-wrap">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    {{ $index + 1 }}
+                                </th>
+                                <td class="px-6 py-4 break-all">
+                                    {{ $table['fullname'] }}
+                                </td>
+                                <td class="px-6 py-4 break-all">
+                                    {{ $table['email'] }}
+                                </td>
+                                <td class="px-6 py-4 break-all">
+                                    {{ $table['school_name'] }}
+                                </td>
+                                <td class="px-6 py-4 break-all">
+                                    {{ $table['secret_key'] }}
+                                </td>
+                                <td class="px-6 py- break-all">
+                                    {{ $table['purchase_code'] }}
+                                </td>
+                                <td class="px-6 py-4 break-all">
+                                    {{ $table['url'] }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    delete
+                                </td>
+                            </tr>
+                            @endforeach
+                           </tbody>
+                            @endif
                         </table>
+                        @if(count($tableArray) < 0)
                         <div>
                             <div
                                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 relative p-10 flex justify-center items-center text-sm text-gray-400">
                                 <p>No clients available. Create a client to start sending notifications.</p>
                             </div>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
